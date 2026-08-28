@@ -7621,7 +7621,7 @@ function BeeSwarmSimulator(DATA){
 
             slot=player.hive[player.hiveIndex[1]][player.hiveIndex[0]],
             pluralTreatName=MATH.doPlural(MATH.doGrammar(type).toLowerCase()),
-            chanceOfGiftedRoll=args.giftedChance||(slot.bee.type==='buoyant'?1.15:1)/5000
+            chanceOfGiftedRoll=args.giftedChance||(slot.bee.type==='buoyant'?1.15:1)/50
 
         document.getElementById('feedUntilGifted').style.display=(args.hasFavorites&&beeInfo[slot.bee.type].favoriteTreat===type||args.alwaysGiftedable)&&!slot.gifted?'block':'none'
 
@@ -24580,7 +24580,7 @@ function BeeSwarmSimulator(DATA){
                 },{
                     name:'Star Treat',
                     items:[['starTreat',1]],
-                    cost:[10000],
+                    cost:[1000],
                     svgs:[['starTreat',0,11,0.75,0.75]],
                     desc:'<br>Turns a bee into a Gifted Bee!',
                     topDesc:13
